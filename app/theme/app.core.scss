@@ -1,0 +1,170 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+body {
+  font-family: 'Avenir Next', 'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+ion-toolbar.toolbar {
+  height: 64px;
+  min-height: 64px;
+  max-height: 64px;
+}
+
+.red {
+  color: #ff008f;
+}
+
+.toolbar-title {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000;
+}
+.row {
+  display: flex;
+}
+
+.fill {
+  flex: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  
+  .contest-item {
+    display: flex;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    
+    &.last {
+      margin-bottom: 52px;
+    }
+    
+    img {
+      width: 104px;
+      height: 104px;
+      margin-right: 16px;
+      object-fit: cover;
+      
+      &.contest-avatar {
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+.hack-title {
+  margin-top: -6px;
+  font-size: 20px;
+}
+
+header.group-header h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-left: 10px;
+}
+
+.contestent-list {
+  margin-top: 78px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  
+  .contestent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .container {
+      position: relative;
+      width: 122px;
+      height: 122px;
+      svg {
+        position: absolute;
+        top: -9px;
+        left: -9px;
+      }
+    }
+    
+    img {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+    }
+    
+    .up-vote {
+      font-size: 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: -6px;
+      
+      ion-icon.voted {
+        color: #00f9b2;
+      }
+      ion-icon.inactive {
+        color: #ccc;
+      }
+      ion-icon.inactive + div {
+        color: rgba(255, 0, 143, 0.38);
+      }
+      ion-icon.voted + div {
+        color: #ff008f;
+      }
+    }
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.just-as-usual {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 52px;
+  color: #ff008f;
+}
+
+.margin-bottom {
+  margin-bottom: 52px;
+}
+
+.toolbar-background {
+  background-color: #ff008f;
+}
+.toolbar-title,
+.bar-button-default {
+  color: #fff;
+}
+
+ion-toolbar.footer .toolbar-content {
+  display: flex;
+  justify-content: center;
+  
+  .button-inner {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}
