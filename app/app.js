@@ -15,6 +15,8 @@ export class MyApp {
   constructor(platform, nav, navParams) {
     this.rootPage = EventsPage;
 
+    console.log(platform);
+
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
