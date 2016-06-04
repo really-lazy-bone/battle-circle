@@ -84,8 +84,11 @@ header.group-header h2 {
   margin-left: 10px;
 }
 
+ion-slides {
+  height: calc(100% - 130px);
+}
+
 .contestent-list {
-  margin-top: 78px;
   display: flex;
   align-items: center;
   padding: 0 16px;
@@ -103,7 +106,7 @@ header.group-header h2 {
       svg {
         position: absolute;
         top: -9px;
-        left: -9px;
+        left: 0;
       }
     }
 

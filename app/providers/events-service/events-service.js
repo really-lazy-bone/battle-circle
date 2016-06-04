@@ -13,7 +13,7 @@ export class EventsService {
   constructor() {
     this.data = [
       {
-        name: 'AT&T Hack-a-thon talent show',
+        name: 'AT&T Hack Talent Show 💃',
         img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/nightlife',
         contestents: [
           {
@@ -37,7 +37,7 @@ export class EventsService {
         ]
       },
       {
-        name: 'Streetclub yo',
+        name: 'Dance Off Fam 😂',
         img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/nightlife',
         contestents: [
           {
@@ -55,10 +55,10 @@ export class EventsService {
         ]
       }
     ];
-    
+
     this.pastData = [
       {
-        name: 'AT&T Developer Summit',
+        name: 'Lip-sync Battle 🎤',
         img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/nightlife',
         contestents: [
           {
@@ -88,7 +88,7 @@ export class EventsService {
         ]
       },
       {
-        name: 'AngelHack',
+        name: 'Loudest YELL 😱😱😱😱',
         img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/nightlife',
         contestents: [
           {
@@ -129,7 +129,7 @@ export class EventsService {
   getActiveEvents() {
     return this.data;
   }
-  
+
   getPastEvents() {
     return this.pastData;
   }

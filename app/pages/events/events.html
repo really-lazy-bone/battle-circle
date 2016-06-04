@@ -14,7 +14,8 @@
     </header>
     <div class="contest-item"
       (click)="toContest(event)"
-      *ngFor="let event of events">
+      [class.last]="last"
+      *ngFor="let event of events; let last = last">
       <img [src]="event.img" alt="">
       <div class="fill column">
         <h2 class="hack-title red">{{event.name}}</h2>
@@ -22,7 +23,7 @@
           <img [src]="contestent.img" alt="" class="contest-avatar"
             *ngFor="let contestent of event.contestents">
         </div>
-      </div>  
+      </div>
     </div>
     <header class="group-header">
       <h2 class="red">Past events</h2>
@@ -37,7 +38,7 @@
           <img [src]="contestent.img" alt="" class="contest-avatar"
             *ngFor="let contestent of event.contestents">
         </div>
-      </div>  
+      </div>
     </div>
   </div>
 </ion-content>

@@ -4,25 +4,31 @@
 
 <ion-content>
   <p class="center just-as-usual">
-    Vote below
+    {{!voted ? 'Vote below 👇' : 'Thanks! 😉'}}
   </p>
   <header>
     <h1 class="center red" (click)="reset()">{{data.name}}</h1>
   </header>
-  <div class="contestent-list">
-    <div class="contestent"
-      *ngFor="let contestent of data.contestents">
-      <div class="container"
-        id="{{contestent.id}}">
-        <img [src]="contestent.img" alt="">
+  <ion-slides pager>
+
+    <ion-slide *ngFor="let pair of pairs">
+      <div class="contestent-list">
+        <div class="contestent"
+          *ngFor="let contestent of pair">
+          <div class="container"
+            id="{{contestent.id}}">
+            <img [src]="contestent.img" alt="">
+          </div>
+          <div class="up-vote"
+            (click)="vote(contestent)">
+            <ion-icon name="ios-arrow-up" [class]="getIconClass(contestent)"></ion-icon>
+            <div>{{contestent.votePercentage * 100 | number: '1.0-0'}}%</div>
+          </div>
+        </div>
       </div>
-      <div class="up-vote"
-        (click)="vote(contestent)">
-        <ion-icon name="ios-arrow-up" class="inactive"></ion-icon>
-        <div>{{contestent.votePercentage * 100 | number: '1.0-1'}}%</div>
-      </div>
-    </div>
-  </div>
+    </ion-slide>
+  </ion-slides>
+
 </ion-content>
 
 <ion-toolbar class="footer" position="bottom">
