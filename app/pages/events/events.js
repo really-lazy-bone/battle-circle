@@ -1,24 +1,33 @@
 import {Page, NavController} from 'ionic-angular';
 import {ContestPage} from '../contest/contest';
 import {ControlPage} from '../control/control';
+import {EventsService} from '../../providers/events-service/events-service';
 
 @Page({
-  templateUrl: 'build/pages/events/events.html'
+  templateUrl: 'build/pages/events/events.html',
+  providers: [EventsService]
 })
 export class EventsPage {
   static get parameters() {
-    return [[NavController]];
+    return [[NavController], [EventsService]];
   }
   
-  constructor(nav) {
+  constructor(nav, eventService) {
     this.nav = nav;
+    
+    this.events = eventService.getActiveEvents();
+    this.pastEvents = eventService.getPastEvents();
   }
   
-  toContest() {
-    this.nav.push(ContestPage, {});
+  toContest(item) {
+    this.nav.push(ContestPage, {
+      item: item
+    });
   }
   
-  toControl() {
-    this.nav.push(ControlPage, {});
+  toControl(item) {
+    this.nav.push(ControlPage, {
+      item: item
+    });
   }
 }

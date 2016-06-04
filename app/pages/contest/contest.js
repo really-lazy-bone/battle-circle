@@ -1,15 +1,33 @@
-import {Page} from 'ionic-angular';
+import {Page, NavController, NavParams} from 'ionic-angular';
 
 @Page({
   templateUrl: 'build/pages/contest/contest.html'
 })
 export class ContestPage {
-  constructor() {
-    console.log('test');
+  static get parameters() {
+    return [[NavController], [NavParams]];
+  }
+  
+  constructor(nav, params) {
+    this.data = params.get('item');
+    var self = this;
+    var totalVote = this.data.contestents.map(contestent => {
+      return contestent.vote
+    }).reduce((total, vote) => {
+      return total + vote
+    }, 0);
+    self.data.contestents = self.data.contestents.map(contestent => {
+      contestent.votePercentage = contestent.vote / totalVote;
+      return contestent;
+    });
+    
     setTimeout(function() {
       var containers = document.querySelectorAll('.contestent .container');
       
       for (var i = 0; i < containers.length; i ++) {
+        var id = containers[i].getAttribute('id');
+        var votePercentage = self.data.contestents.filter(contestent => contestent.id === parseInt(id))
+          .map(contestent => contestent.votePercentage)[0];
         var bar = new ProgressBar.Circle(containers[i], {
           strokeWidth: 5,
           easing: 'easeInOut',
@@ -20,7 +38,7 @@ export class ContestPage {
           svgStyle: null
         });
         
-        bar.animate(Math.random());  
+        bar.animate(votePercentage);
       }
     }, 500);
   }

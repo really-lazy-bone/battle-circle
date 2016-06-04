@@ -10,6 +10,10 @@ body {
   font-family: 'Avenir Next', 'Helvetica', 'Arial', 'Sans-Serif';
 }
 
+img {
+  object-fit: cover;
+}
+
 ion-toolbar.toolbar {
   height: 64px;
   min-height: 64px;

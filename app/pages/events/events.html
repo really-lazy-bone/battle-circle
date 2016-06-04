@@ -13,51 +13,29 @@
       <h2 class="red">Live events</h2>
     </header>
     <div class="contest-item"
-      (click)="toContest()">
-      <img src="http://lorempixel.com/130/130" alt="">
+      (click)="toContest(event)"
+      *ngFor="let event of events">
+      <img [src]="event.img" alt="">
       <div class="fill column">
-        <h2 class="hack-title red">Cher</h2>
+        <h2 class="hack-title red">{{event.name}}</h2>
         <div class="row">
-          <img src="http://loremflickr.com/320/240" alt="" class="contest-avatar">
-          <img src="http://loremflickr.com/320/240" alt="" class="contest-avatar">
-          <img src="http://loremflickr.com/320/240" alt="" class="contest-avatar">
-        </div>
-      </div>  
-    </div>
-    <div class="last contest-item"
-      (click)="toContest()">
-      <img src="http://lorempixel.com/130/130" alt="">
-      <div class="fill column">
-        <h2 class="hack-title red">Cher</h2>
-        <div class="row">
-          <img src="http://loremflickr.com/320/240" alt="" class="contest-avatar">
-          <img src="http://loremflickr.com/320/240" alt="" class="contest-avatar">
-          <img src="http://loremflickr.com/320/240" alt="" class="contest-avatar">
+          <img [src]="contestent.img" alt="" class="contest-avatar"
+            *ngFor="let contestent of event.contestents">
         </div>
       </div>  
     </div>
     <header class="group-header">
       <h2 class="red">Past events</h2>
     </header>
-    <div class="contest-item">
-      <img src="http://lorempixel.com/130/130" alt="">
+    <div class="contest-item"
+      (click)="toContest(event)"
+      *ngFor="let event of pastEvents">
+      <img [src]="event.img" alt="">
       <div class="fill column">
-        <h2 class="hack-title red">Cher</h2>
+        <h2 class="hack-title red">{{event.name}}</h2>
         <div class="row">
-          <img src="http://loremflickr.com/320/240" alt="" class="contest-avatar">
-          <img src="http://loremflickr.com/320/240" alt="" class="contest-avatar">
-          <img src="http://loremflickr.com/320/240" alt="" class="contest-avatar">
-        </div>
-      </div>  
-    </div>
-    <div class="last contest-item">
-      <img src="http://lorempixel.com/130/130" alt="">
-      <div class="fill column">
-        <h2 class="hack-title red">Cher</h2>
-        <div class="row">
-          <img src="http://loremflickr.com/320/240" alt="" class="contest-avatar">
-          <img src="http://loremflickr.com/320/240" alt="" class="contest-avatar">
-          <img src="http://loremflickr.com/320/240" alt="" class="contest-avatar">
+          <img [src]="contestent.img" alt="" class="contest-avatar"
+            *ngFor="let contestent of event.contestents">
         </div>
       </div>  
     </div>
