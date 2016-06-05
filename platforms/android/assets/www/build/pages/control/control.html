@@ -4,30 +4,38 @@
 
 <ion-content>
   <p class="center just-as-usual">
-    Vote below
+    👻👻👻👻👻👻👻
   </p>
   <header>
-    <h1 class="center red">Event title</h1>
+    <h1 class="center red" (click)="reset()">{{data.name}}</h1>
   </header>
-  <div class="contestent-list">
-    <div class="contestent">
-      <div class="container">
-        <img src="http://loremflickr.com/320/240" alt="">
+  <ion-slides pager>
+
+    <ion-slide *ngFor="let pair of pairs">
+      <div class="contestent-list">
+        <div class="contestent"
+          *ngFor="let contestent of pair">
+          <div class="recording-container"
+            (click)="record(contestent)"
+            id="{{contestent.id}}">
+            <img [src]="contestent.img" alt="">
+          </div>
+          <div class="up-vote">
+            <div>{{contestent.votePercentage * 100 | number: '1.0-0'}}%</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="contestent">
-      <div class="container">
-        <img src="http://loremflickr.com/320/240" alt="">
-      </div>
-    </div>
-  </div>
+    </ion-slide>
+  </ion-slides>
+
 </ion-content>
 
 <ion-toolbar class="footer" position="bottom">
-  <button clear>
+  <button clear
+    (click)="end()">
     End
   </button>
   <button clear>
-    New Round
+    {{listening ? 'Recording' : 'Record'}}
   </button>
 </ion-toolbar>

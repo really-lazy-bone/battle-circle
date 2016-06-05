@@ -1,34 +1,42 @@
 <ion-navbar *navbar>
   <ion-title>Round 1</ion-title>
+  <ion-buttons end [hidden]="!admin">
+    <button (click)="toControl()">
+      <ion-icon name="cog"></ion-icon>
+    </button>
+  </ion-buttons>
 </ion-navbar>
 
 <ion-content>
-  <p class="center just-as-usual">
-    Vote below
+  <p [class]="getTitleClass()">
+    {{getTitle()}}
   </p>
-  <header>
-    <h1 class="center red">Event title</h1>
+  <header [hidden]="ended">
+    <h1 class="center red">{{data.name}}</h1>
   </header>
-  <div class="contestent-list">
-    <div class="contestent">
-      <div class="container">
-        <img src="http://loremflickr.com/320/240" alt="">
+  <ion-slides pager>
+
+    <ion-slide *ngFor="let pair of pairs">
+      <div class="contestent-list">
+        <div class="contestent"
+          *ngFor="let contestent of pair"
+          [hidden]="shouldHide(contestent)">
+          <div class="container"
+            id="{{contestent.id}}"
+            (click)="toVideo()">
+            <img [src]="contestent.img" alt="">
+          </div>
+          <div class="up-vote"
+            (click)="vote(contestent)">
+            <ion-icon name="ios-arrow-up" [class]="getIconClass(contestent)" [hidden]="ended"></ion-icon>
+            <div class="odometer-container" id="{{contestent.id}}"></div>
+          </div>
+        </div>
       </div>
-      <div class="up-vote">
-        <ion-icon name="ios-arrow-up" class="inactive"></ion-icon>
-        <div>7%</div>
-      </div>
-    </div>
-    <div class="contestent">
-      <div class="container">
-        <img src="http://loremflickr.com/320/240" alt="">
-      </div>
-      <div class="up-vote">
-        <ion-icon name="ios-arrow-up" class="voted"></ion-icon>
-        <div>8%</div>
-      </div>
-    </div>
-  </div>
+    </ion-slide>
+
+  </ion-slides>
+
 </ion-content>
 
 <ion-toolbar class="footer" position="bottom">

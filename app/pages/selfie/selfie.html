@@ -1,0 +1,9 @@
+<ion-navbar *navbar>
+  <ion-title>Live Streaming</ion-title>
+</ion-navbar>
+<ion-content>
+  <header [hidden]="countdown <= 0">
+    <h1 class="red center">{{countdown}}</h1>
+  </header>
+  <img src="http://8c5a719e.ngrok.io/stream/snapshot.jpeg?delay_s=3" alt="" class="video-streaming">
+</ion-content>

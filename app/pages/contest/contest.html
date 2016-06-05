@@ -1,32 +1,40 @@
 <ion-navbar *navbar>
   <ion-title>Round 1</ion-title>
+  <ion-buttons end [hidden]="!admin">
+    <button (click)="toControl()">
+      <ion-icon name="cog"></ion-icon>
+    </button>
+  </ion-buttons>
 </ion-navbar>
 
 <ion-content>
-  <p class="center just-as-usual">
-    {{!voted ? 'Vote below 👇' : 'Thanks! 😉'}}
+  <p [class]="getTitleClass()">
+    {{getTitle()}}
   </p>
-  <header>
-    <h1 class="center red" (click)="reset()">{{data.name}}</h1>
+  <header [hidden]="ended">
+    <h1 class="center red">{{data.name}}</h1>
   </header>
   <ion-slides pager>
 
     <ion-slide *ngFor="let pair of pairs">
       <div class="contestent-list">
         <div class="contestent"
-          *ngFor="let contestent of pair">
+          *ngFor="let contestent of pair"
+          [hidden]="shouldHide(contestent)">
           <div class="container"
-            id="{{contestent.id}}">
+            id="{{contestent.id}}"
+            (click)="toVideo()">
             <img [src]="contestent.img" alt="">
           </div>
           <div class="up-vote"
             (click)="vote(contestent)">
-            <ion-icon name="ios-arrow-up" [class]="getIconClass(contestent)"></ion-icon>
-            <div>{{contestent.votePercentage * 100 | number: '1.0-0'}}%</div>
+            <ion-icon name="ios-arrow-up" [class]="getIconClass(contestent)" [hidden]="ended"></ion-icon>
+            <div class="odometer-container" id="{{contestent.id}}"></div>
           </div>
         </div>
       </div>
     </ion-slide>
+
   </ion-slides>
 
 </ion-content>

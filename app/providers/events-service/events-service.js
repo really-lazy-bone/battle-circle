@@ -14,42 +14,42 @@ export class EventsService {
     this.data = [
       {
         name: 'AT&T Hack Talent Show 💃',
-        img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/nightlife',
+        img: 'imgs/att_roc.jpg',
         contestents: [
           {
             id: 1,
-            name: 'Eric',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            name: 'Pierre',
+            img: 'imgs/pierre-avatar.png',
             vote: parseInt(Math.random() * 10)
           },
           {
             id: 2,
             name: 'Michael',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            img: 'imgs/michael-avatar.jpg',
             vote: parseInt(Math.random() * 10)
           },
           {
             id: 3,
-            name: 'Pierre',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            name: 'Eric',
+            img: 'imgs/eric-avatar.jpg',
             vote: parseInt(Math.random() * 10)
           }
         ]
       },
       {
         name: 'Dance Off Fam 😂',
-        img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/nightlife',
+        img: 'imgs/family.jpg',
         contestents: [
           {
             id: 4,
             name: 'Mark',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            img: 'imgs/person3.jpg',
             vote: parseInt(Math.random() * 10)
           },
           {
             id: 5,
             name: 'Steven',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            img: 'imgs/person4.jpg',
             vote: parseInt(Math.random() * 10)
           }
         ]
@@ -59,66 +59,66 @@ export class EventsService {
     this.pastData = [
       {
         name: 'Lip-sync Battle 🎤',
-        img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/nightlife',
+        img: 'imgs/lip-sync-battle.jpg',
         contestents: [
           {
             id: 6,
             name: 'Eric',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            img: 'imgs/person9.png',
             vote: parseInt(Math.random() * 10)
           },
           {
             id: 7,
             name: 'Michael',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            img: 'imgs/person8.jpg',
             vote: parseInt(Math.random() * 10)
           },
           {
             id: 8,
             name: 'Pierre',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            img: 'imgs/person1.jpg',
             vote: parseInt(Math.random() * 10)
           },
           {
             id: 9,
             name: 'Pierre',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            img: 'imgs/person2.jpeg',
             vote: parseInt(Math.random() * 10)
           }
         ]
       },
       {
         name: 'Loudest YELL 😱😱😱😱',
-        img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/nightlife',
+        img: 'imgs/evil-burns.png',
         contestents: [
           {
             id: 10,
             name: 'Mark',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            img: 'imgs/person4.jpg',
             vote: parseInt(Math.random() * 10)
           },
           {
             id: 11,
             name: 'Steven',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            img: 'imgs/person5.jpg',
             vote: parseInt(Math.random() * 10)
           },
           {
             id: 12,
             name: 'Alex',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            img: 'imgs/person6.jpg',
             vote: parseInt(Math.random() * 10)
           },
           {
             id: 13,
             name: 'Pierre',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            img: 'imgs/person7.jpg',
             vote: parseInt(Math.random() * 10)
           },
           {
             id: 14,
             name: 'Pierre',
-            img: 'http://lorempixel.com/' + (parseInt(Math.random() * 300) + 50) + '/' + (parseInt(Math.random() * 300) + 50) + '/people',
+            img: 'imgs/person3.jpg',
             vote: parseInt(Math.random() * 10)
           }
         ]

@@ -21,6 +21,7 @@
 		AFF7D217B37747C8A81DBEE5 /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C964DFA2C4A4823AEAA7DEF /* CDVViewController+SplashScreen.m */; };
 		B5BAEB6C22914BCF816ADDFA /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E86CD92B9CA84072916DF3FE /* CDVStatusBar.m */; };
 		DD8725AB6DCA4427932FE4BA /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 402BD901A2B84A21A21E873A /* IonicKeyboard.m */; };
+		0AD1CEC7CAB44B05A88D24B7 /* DBMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA62634A8E8D4FAD9FE9EA0A /* DBMeter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		0D76AB53E0DE4BF0BF611C42 /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		402BD901A2B84A21A21E873A /* IonicKeyboard.m */ = {isa = PBXFileReference; name = "IonicKeyboard.m"; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		34240FF7E2EE44CAA297C645 /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		DA62634A8E8D4FAD9FE9EA0A /* DBMeter.swift */ = {isa = PBXFileReference; name = "DBMeter.swift"; path = "cordova-plugin-dbmeter/DBMeter.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				0D76AB53E0DE4BF0BF611C42 /* CDVStatusBar.h */,
 				402BD901A2B84A21A21E873A /* IonicKeyboard.m */,
 				34240FF7E2EE44CAA297C645 /* IonicKeyboard.h */,
+				DA62634A8E8D4FAD9FE9EA0A /* DBMeter.swift */,
 			);
 			name = Plugins;
 			path = "battle-sqaure/Plugins";
@@ -306,6 +309,7 @@
 				AFF7D217B37747C8A81DBEE5 /* CDVViewController+SplashScreen.m in Sources */,
 				B5BAEB6C22914BCF816ADDFA /* CDVStatusBar.m in Sources */,
 				DD8725AB6DCA4427932FE4BA /* IonicKeyboard.m in Sources */,
+				0AD1CEC7CAB44B05A88D24B7 /* DBMeter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
